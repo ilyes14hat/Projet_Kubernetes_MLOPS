@@ -1,2 +1,0 @@
-2 services + 1 BDD.
-1 service = traitement des données
