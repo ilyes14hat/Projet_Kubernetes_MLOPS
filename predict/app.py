@@ -1,11 +1,12 @@
-# predict_microservice.py
 from flask import Flask, request, jsonify
 import requests
 from PIL import Image
-import keras.utils as image
 import numpy as np
 from keras.models import load_model
 import os
+
+
+
 app = Flask(__name__)
 
 # Load model
