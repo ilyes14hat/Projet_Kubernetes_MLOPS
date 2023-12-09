@@ -26,3 +26,5 @@ def preprocess_input():
     result = {'preprocessed_data': Array_IMG.tolist()}
     return jsonify(result)
 
+if __name__ == '__main__':
+    app.run(debug=True, host='127.0.0.1', port=5001)
