@@ -29,19 +29,6 @@ def predict():
         preprocessed_data = np.array(r.json()['preprocessed_data'])
     os.remove('temprory.jpg')
 
-    # preprocess_input_url = 'http://127.0.0.1:5001/preprocess_input'
-    # response = requests.post(preprocess_input_url, files={'image': uploaded_file})
-    # preprocessed_data = np.array(response.json()['preprocessed_data'])
-
-
-    #################################   Works Excellent   ###########################################
-    # Load_IMG = img.resize((224,224))
-    # Array_IMG = image.img_to_array(Load_IMG)
-    # Array_IMG = Array_IMG.reshape((1,) + Array_IMG.shape)
-    # Array_IMG /= 127.5
-    # Array_IMG -= 1.
-    #################################################################################################
-
     prediction = model.predict(preprocessed_data)
     label = np.argmax(prediction)
 
@@ -49,3 +36,6 @@ def predict():
     result = {'prediction': classes[label]}
 
     return jsonify(result)
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
