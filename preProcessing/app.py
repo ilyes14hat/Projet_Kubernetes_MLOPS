@@ -3,7 +3,6 @@ from flask import Flask, request, jsonify
 import numpy as np
 import keras.utils as image
 from PIL import Image
-import io
 
 
 

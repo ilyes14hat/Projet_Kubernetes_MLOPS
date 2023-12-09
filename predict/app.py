@@ -4,7 +4,6 @@ import requests
 from PIL import Image
 import keras.utils as image
 import numpy as np
-from keras.preprocessing.image import ImageDataGenerator
 from keras.models import load_model
 import os
 app = Flask(__name__)

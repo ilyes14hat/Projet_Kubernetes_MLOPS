@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 import requests
-import time
 # Streamlit UI function
 def main():
     st.title("Blood Cells Classification")
