@@ -19,7 +19,7 @@ def main():
             img_bytes = uploaded_file.getvalue()
 
             # Send the image to the predict microservice
-            predict_microservice_url = 'http://127.0.0.1:5000/predict'
+            predict_microservice_url = 'http://predict-service:5000/predict'
             files = {'image': img_bytes}
             print(img_bytes)
             response = requests.post(predict_microservice_url, files=files)

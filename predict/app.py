@@ -24,7 +24,7 @@ def predict():
     
     # Pass the image to preprocess_input microservice
     with open('temprory.jpg', 'rb') as f:
-        preprocess_input_url = 'http://127.0.0.1:5001/preprocess_input'
+        preprocess_input_url = 'http://preprocess-service:5001/preprocess_input'
         r = requests.post(preprocess_input_url, files={'image': f})
         preprocessed_data = np.array(r.json()['preprocessed_data'])
     os.remove('temprory.jpg')
