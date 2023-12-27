@@ -1,6 +1,8 @@
 import streamlit as st
 from PIL import Image
 import requests
+
+
 # Streamlit UI function
 def main():
     st.title("Blood Cells Classification")
@@ -21,9 +23,9 @@ def main():
             # Send the image to the predict microservice
             predict_microservice_url = 'http://predict-service:5000/predict'
             files = {'image': img_bytes}
-            print(img_bytes)
+            # print(img_bytes)
             response = requests.post(predict_microservice_url, files=files)
-            print(response)
+            # print(response)
 
             # Display the prediction
             if response.status_code == 200:

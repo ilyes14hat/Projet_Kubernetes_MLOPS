@@ -33,7 +33,7 @@ spec:
     - protocol: TCP
       port: 80  # Expose the service on this port
       targetPort: 8501  # Forward traffic to this container port
-  type: ClusterIP  # Use NodePort for external access
+  type: LoadBalancer  # Use NodePort for external access
 ---
 apiVersion: apps/v1
 kind: Deployment
